@@ -1,0 +1,173 @@
+// Navigation panel
+
+case menu_style
+  when 1
+    - var menu_style = "stick-fixed"
+  when 2
+    - var menu_style = "transparent stick-fixed"
+  default
+    - var menu_style = "js-stick"
+case class_switch_menu
+  when 1
+    - var class_switch_menu = "switch-menu"
+  default
+    - var class_switch_menu = ""
+nav.main-nav(class= menu_style)
+  .full-wrapper.relative.clearfix.container
+    // Logo ( * your text or image into link tag *)
+    .nav-logo-wrap.local-scroll
+      a.logo(href='index.html')
+        img(src='img/the8-logo.png', data-at2x="img/the8-logo@2x.png", alt)
+        img.sticky-logo(src='img/the8-logo-sticky.png', data-at2x="img/the8-logo-sticky@2x.png", alt)
+    // Main Menu
+    .inner-nav.desktop-nav(class= class_switch_menu)
+      ul.clearlist
+        // Item With Sub
+        li
+          a.mn-has-sub(href='index.html' class=(active_menu === 'home' ? 'active' : ''))
+            | Home 
+            i.fa.fa-angle-down.button_open
+          ul.mn-sub
+            li(class=(active_sub_menu === 'index.html' ? 'active' : ''))
+              a(href="index.html") Standart Slider
+            li(class=(active_sub_menu === 'index-slider.html' ? 'active' : ''))
+              a(href="index-slider.html") Full-Screen Slider
+            li(class=(active_sub_menu === 'index-video.html' ? 'active' : ''))
+              a(href="index-video.html") Video Background
+        // End Item With Sub
+        // Item With Sub
+        li
+          a.mn-has-sub(href='page-about-us.html' class=(active_menu === 'pages' ? 'active' : ''))
+            | Pages 
+            i.fa.fa-angle-down.button_open
+          // Sub
+          ul.mn-sub
+            li(class=(active_sub_menu === 'page-about-us.html' ? 'active' : ''))
+              a(href='page-about-us.html') About Us
+            li(class=(active_sub_menu === 'page-services.html' ? 'active' : ''))
+              a(href='page-services.html') Services
+            li(class=(active_sub_menu === 'page-procces.html' ? 'active' : ''))
+              a(href='page-procces.html') Our Procces
+            li(class=(active_sub_menu === 'page-our-team.html' ? 'active' : ''))
+              a(href='page-our-team.html') Our Team
+            li(class=(active_sub_menu === 'page-profile.html' ? 'active' : ''))
+              a(href='page-profile.html') Profile
+            li(class=(active_sub_menu === 'page-components.html' ? 'active' : ''))
+              a(href='page-components.html') Components
+          // End Sub
+        // End Item With Sub
+        // Item With Sub
+        li
+          a.mn-has-sub(href='portfolio-3-col.html' class=(active_menu === 'portfolio' ? 'active' : ''))
+            | Portfolio 
+            i.fa.fa-angle-down.button_open
+          // Sub
+          ul.mn-sub
+            li(class=(active_sub_menu === 'portfolio-3-col.html' ? 'active' : ''))
+              a(href='portfolio-3-col.html') Three Columns
+            li(class=(active_sub_menu === 'portfolio-4-col.html' ? 'active' : ''))
+              a(href='portfolio-4-col.html') Four Columns
+            li(class=(active_sub_menu === 'portfolio-with-sidebar.html' ? 'active' : ''))
+              a(href='portfolio-with-sidebar.html') With Sidebar
+            li(class=(active_sub_menu === 'portfolio-gallery.html' ? 'active' : ''))
+              a(href='portfolio-gallery.html') Gallery
+            li(class=(active_sub_menu === 'page-portfolio-single.html' ? 'active' : ''))
+              a(href='page-portfolio-single.html') Portfolio Single
+          // End Sub
+        // End Item With Sub
+        // Item With Sub
+        li
+          a.mn-has-sub(href='blog-sidebar-right.html' class=(active_menu === 'blog' ? 'active' : ''))
+            | Blog 
+            i.fa.fa-angle-down.button_open
+          // Sub
+          ul.mn-sub
+            li(class=(active_sub_menu_add === 'blog-col'  ? 'active' : ''))
+              a.mn-has-sub(href='blog-2-col.html') Columns
+                i.fa.fa-angle-right.pull-right.button_open
+              ul.mn-sub.to-left
+                li(class=(active_sub_menu === 'blog-2-col.html' ? 'active' : ''))
+                  a(href='blog-2-col.html') Two Columns
+                li(class=(active_sub_menu === 'blog-2-col-sidebar.html' ? 'active' : ''))
+                  a(href='blog-2-col-sidebar.html') Two Columns + Sidebar
+                li(class=(active_sub_menu === 'blog-3-col.html' ? 'active' : ''))
+                  a(href='blog-3-col.html') Three Columns
+            li(class=(active_sub_menu === 'blog-sidebar-right.html' ? 'active' : ''))
+              a(href='blog-sidebar-right.html') Blog Right Sidebar
+            li(class=(active_sub_menu === 'blog-medium-img.html' ? 'active' : ''))
+              a(href='blog-medium-img.html') Medium Images
+            li(class=(active_sub_menu === 'blog-small-img.html' ? 'active' : ''))
+              a(href='blog-small-img.html') Small Images
+            li(class=(active_sub_menu === 'blog-single.html' ? 'active' : ''))
+              a(href='blog-single.html') Blog Single
+          // End Sub
+        // End Item With Sub
+        // Item With Sub
+        li
+          a.mn-has-sub(href='shop-grid.html' class=(active_menu === 'shop' ? 'active' : ''))
+            | Shop 
+            i.fa.fa-angle-down.button_open
+          // Sub
+          ul.mn-sub
+            li(class=(active_sub_menu === 'shop-grid.html' ? 'active' : ''))
+              a(href='shop-grid.html') Shop Grid
+            li(class=(active_sub_menu === 'shop-cart.html' ? 'active' : ''))
+              a(href='shop-cart.html') Shop Cart
+            li(class=(active_sub_menu === 'shop-checkout.html' ? 'active' : ''))
+              a(href='shop-checkout.html') Shop Checkout
+            li(class=(active_sub_menu === 'shop-single.html' ? 'active' : ''))
+              a(href='shop-single.html') Shop Single Product
+          // End Sub
+        // End Item With Sub
+        // Item
+        li
+          a(href='page-contact.html' class=(active_menu === 'contact' ? 'active' : ''))
+            | Contact
+        // End Item
+        // Cart
+        li.menu-shop-card
+          a.mn-has-sub(href='#')
+            i.flaticon-shopping-carts6.button_open #[span 2]
+          ul.mn-sub.right
+            li
+              aside.widget-top-sellers.shop-cart-menu
+                p You have #[span2.tx-color-2 item(s)] in your shopping bag
+                // item recent post
+                .item-top-sellers.clearfix
+                  img(src='pic/shop/70x70/6.jpg' data-at2x="pic/shop/70x70/6@2x.jpg" alt)
+                  h3.title #[a(href='shop-single.html') Phasellus accumsan cur]
+                  .price 1 x $55.00
+                // ! item recent post
+                // item recent post
+                .item-top-sellers.clearfix
+                  img(src='pic/shop/70x70/1.jpg' data-at2x="pic/shop/70x70/1@2x.jpg" alt)
+                  h3.title #[a(href='shop-single.html') Aenean posuere tortor]
+                  .price 3 x $120.00
+                // ! item recent post
+                hr.mt-10.mb-10
+                div.sub-total.clearfix Sub Total: #[span $2400]
+                hr.mt-10.mb-10
+                .row
+                  .col-xs-6
+                    a.cws-button.full-width(href="shop-cart.html") View Cart
+                  .col-xs-6
+                    a.cws-button.full-width(href="shop-checkout.html") Checkout
+        // End Cart
+        // Search
+        li.search
+          a.mn-has-sub(href='#')
+            i.flaticon-magnifying-glass34.search-icon
+          ul.search-sub
+            li
+              .container
+                .mn-wrap
+                  form.form(method='post')
+                    .search-wrap
+                      input.form-control.search-field(type='text', placeholder='Search . . .')
+                .close-button.flaticon-cancel30
+        // End Search
+      if class_switch_menu
+        a(class="menu-bar" href="#")
+          span(class="ham")
+    // End Main Menu
+// End Navigation panel

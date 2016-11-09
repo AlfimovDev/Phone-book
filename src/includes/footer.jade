@@ -1,0 +1,62 @@
+footer.footer
+	.container
+		.row.cws-multi-col
+			.col-md-3.col-sm-6.mb-md-50
+				.widget-footer.text
+					h3 About
+					.divider
+					p Ut tincidunt nisl sapien, eget gravida quama vestibulum vitae. Ut ultrices purus quis tinci dunt rutrum proin commodo ipsum.
+					p Vestibulum vitae nisl quis elit tristique egesi tas eget sed nisi. Etiam mi sapien, luctus ac tempor quis, varius eu neque.
+			.col-md-3.col-sm-6.mb-md-50
+				.widget-footer
+					h3 Recent posts
+					.divider
+					.recent-item.clearfix
+						a(href='blog-single.html')
+							img(src='pic/footer/7.jpg', data-at2x="pic/footer/7@2x.jpg" , alt)
+						h4.recent-title #[a(href='blog-single.html') Morbi Iaculis]
+						p Ut tincidunt nisl s apien, eget gravida sed nisi reet ... #[a(href='#') more]
+					.recent-item.clearfix
+						a(href='blog-single.html')
+							img(src='pic/footer/8.jpg', data-at2x="pic/footer/8@2x.jpg", alt)
+						h4.recent-title #[a(href='blog-single.html') Praesent sagittis]
+						p Ut tincidunt nisl s apien, eget gravida sed nisi reet ... #[a(href='#') more]
+			.col-md-3.col-sm-6.mb-sm-50
+				.widget-footer
+					h3 Gallery
+					.divider
+					.gallery.clearfix
+						- gallery = ["pic/footer/1","pic/footer/2","pic/footer/3","pic/footer/4","pic/footer/5","pic/footer/6"]
+
+						each item in gallery
+							.gallery-item
+								.pic
+									img(src= item+".jpg", alt, data-at2x= item+"@2x.jpg")
+									.hover-effect.alt
+										.links
+											a.link-icon.alt.flaticon-magnifying-glass84.fancy(href= item+"@2x.jpg")
+			.col-md-3.col-sm-6
+				.widget-footer
+					h3 Contact us
+					.divider
+					address
+						p You can contact us via #[a(href='mailto:the8@gmail.com') the8@gmail.com]
+						strong Our address
+						p 250 Biscayne Blvd. (North) 11st Floor New World Tower Miami, Florida 33148
+						strong Our phone
+						br
+						a(href='tel:180012345678') 1-800-123-45678
+	.copyright
+		.container
+			.row
+				.col-sm-8
+					p Copyrights ©2016: The8 - Premium Multipurpose WordPress Theme
+				.col-sm-4.text-right
+					a.cws-social.flaticon-facebook55(href='#')
+					a.cws-social.flaticon-twitter1(href='#')
+					a.cws-social.fa.fa-google-plus(href='#')
+					a.cws-social.flaticon-social-network106(href='#')
+					a.cws-social.flaticon-pinterest3(href='#')
+div(id='scroll-top')
+	i(class='fa fa-angle-up')
+

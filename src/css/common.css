@@ -1,0 +1,165 @@
+/*-----------------------------------------------------------------------------------
+
+	Template Name: The8
+	Template URI: http://themeforest.net/user/CreativeWS/portfolio
+	Description: "The8" is a flexible HTML template.
+	Author URI: http://creaws.com
+	
+--------------------------------------------------------------------------------
+-- GENERAL
+	--Common Style
+	-- Cws grid addon
+-- Menu bar
+	-- Logo (in navigation panel)
+	-- Desktop nav
+	-- Search header
+	-- Menu sub
+	-- Menu sub multi
+	-- Mobile menu
+	-- Menu bar
+-- HEADER
+	-- Site top panel
+	-- Breadcrumbs
+	-- Slider
+-- LAYOUT
+	-- Bg video
+	-- Button style
+	-- Icon style
+	-- Social icon
+	-- Service item
+	-- Service bg icon
+	-- Half Width services
+	-- Accordion
+	-- Accordion style-2
+	-- Toggle
+	-- Call Out
+	-- Alert Message
+	-- Counter
+	-- Pricing tabels
+	-- Progress bar
+	-- Tabs
+	-- Profile item
+	-- Hover
+	-- Pagination
+	-- Carousel
+	-- Carousel hover
+	-- Comment list
+	-- Embed video
+	-- Footer
+	-- Blog Item
+	-- Blog box
+	-- Blog data
+	-- Blockquote
+-- WIDGETS
+	-- Widget Search
+	-- Widget title
+	-- Widget category & archive
+	-- Widget post
+	-- Widget tags
+	-- Widget Gallery
+	-- Widget Icons
+	-- Widget text
+	-- Widget Recent Post
+	-- Carousel Pagination
+	-- Widget about
+	-- Widget Calendar
+	-- Widget contact form
+-- CONTENT-PAGE
+	-- Admin info
+	-- Leave reply
+	-- Form subscribe
+	-- Cws parallax
+	-- Partner items
+	-- Portfolio item
+	-- Isotope
+	-- Project details
+	-- Star
+	-- Shop grid
+	-- Action product
+	-- Widget filter-price
+	-- Color filter
+	-- Size filter
+	-- Thumbnails
+	-- Single product
+	-- Checkout
+		-- Product table
+		-- Payment_methods
+	-- Shop-cart
+	-- Map
+	-- Contact address
+	-- Banner section
+	-- Twitter
+	-- Boxe page
+	-- Fix for img
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:700, 300';
+@import 'https://fonts.googleapis.com/css?family=Oswald:700';
+
+
+
+/**/
+/* Common Style */
+/**/
+
+.stick-fixed{
+	position: fixed !important;
+	top: 0;
+	left: 0;
+}
+.clearlist, .clearlist li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+html, body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+html.fancybox-lock {
+    overflow: hidden;
+}
+body {
+	overflow-x: hidden;
+}
+html, body{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #616161;
+	font-weight: 300;
+	line-height: 1.75;
+	font-size: 17px;
+	-webkit-font-smoothing: antialiased;
+}
+iframe{
+    border: none;
+}
+a,
+a:hover, a:focus {
+	text-decoration: none;
+	color: inherit;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
+}
+a, b, div, ul, li{
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	-webkit-tap-highlight-color: transparent; 
+	-moz-outline-: none;
+}
+form {
+	margin: 0;
+}
+a:focus,
+a:active{
+	-moz-outline: none;
+	outline: none;
+}
+img, embed, object, video{
+    max-width: 100%;
+    height: auto;
+}
+.row + .row {
+	margin-top: 35px;
+}

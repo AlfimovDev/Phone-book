@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="phoneBook">
+    <!-- header page-->
+    <header></header>
+    <div class="container">
+      <div ng-controller="phoneBookCtrl" class="phone-book">
+        <input type="text" ng-model="name">
+        <input type="text" ng-model="avatar">
+        <input type="text" ng-model="groupe">
+        <button ng-click="addUsers()">Save User</button>
+        <div class="phone-list">
+          <div ng-repeat="user in phoneUsersList" class="phone-user">
+            <h2 class="user-name">{{user.firstName}}</h2>
+            <h3 class="user-group">{{user.group}}</h3>
+            <button ng-click="removeUsers(kos)">Remote Users</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! header page-->
+    <!-- ! footer-->
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular-route/angular-route.js"></script>
+    <script src="js/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/controllers.js"></script>
+  </body>
+</html>

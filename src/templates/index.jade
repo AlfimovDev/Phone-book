@@ -1,0 +1,23 @@
+doctype html
+html
+	include ../includes/head.jade
+	body(ng-app="phoneBook")
+		// header page
+		header
+		.container
+			.phone-book(ng-controller="phoneBookCtrl")
+				input(type="text" ng-model="name")
+				input(type="text" ng-model="avatar")
+				input(type="text" ng-model="groupe")
+				button(ng-click="addUsers()") Save User
+				.phone-list
+					.phone-user(ng-repeat="user in phoneUsersList")
+						h2.user-name {{user.firstName}}
+						h3.user-group {{user.group}}
+						button(ng-click="removeUsers(kos)") Remote Users
+						//- .user-avatar(style="background-image:src({{user.avatar}})")
+
+			
+		// ! header page
+		// ! footer
+		include ../includes/script.jade
