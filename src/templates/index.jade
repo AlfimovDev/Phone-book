@@ -6,16 +6,19 @@ html
 		header
 		.container
 			.phone-book(ng-controller="phoneBookCtrl")
+				lable Name:
 				input(type="text" ng-model="name")
+				lable Avatar:
 				input(type="text" ng-model="avatar")
+				lable Group:
 				input(type="text" ng-model="groupe")
-				button(ng-click="addUsers()") Save User
+				button(ng-click="addUsers(flagEdit)") Save User
 				.phone-list
 					.phone-user(ng-repeat="user in phoneUsersList")
 						h2.user-name {{user.firstName}}
 						h3.user-group {{user.group}}
-						button(ng-click="removeUsers(kos)") Remote Users
-						//- .user-avatar(style="background-image:src({{user.avatar}})")
+						button(ng-click="editUsers(user.$$hashKey)") Edit Users
+						button(ng-click="removeUsers(user.$$hashKey)") Remote Users
 
 			
 		// ! header page
