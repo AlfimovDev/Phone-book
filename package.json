@@ -1,7 +1,7 @@
 {
-  "name": "project-html",
+  "name": "phone-book",
   "version": "1.0.0",
-  "description": "",
+  "description": "learning project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,13 @@
     "gulp-styl": "^1.1.0",
     "gulp-webserver": "^0.9.1",
     "tiny-lr": "^0.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfimovDev/Phone-book.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlfimovDev/Phone-book/issues"
+  },
+  "homepage": "https://github.com/AlfimovDev/Phone-book#readme"
 }

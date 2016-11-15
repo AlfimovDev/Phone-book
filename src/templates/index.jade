@@ -11,11 +11,11 @@ html
 				lable Avatar:
 				input(type="text" ng-model="avatar")
 				lable Group:
-				input(type="text" ng-model="groupe")
+				input(type="text" ng-model="group")
 				button(ng-click="addUsers(flagEdit)") Save User
 				.phone-list
 					.phone-user(ng-repeat="user in phoneUsersList")
-						h2.user-name {{user.firstName}}
+						h2.user-name {{user.name}}
 						h3.user-group {{user.group}}
 						button(ng-click="editUsers(user.$$hashKey)") Edit Users
 						button(ng-click="removeUsers(user.$$hashKey)") Remote Users

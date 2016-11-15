@@ -3,7 +3,7 @@ phoneBook.controller('phoneBookCtrl',function($scope){
     $scope.flagEdit = false;
     $scope.phoneUsersList = [
         {
-            firstName: "Alfimov",
+            name: "Alfimov",
             avatar: "",
             group: "friends"
         }
@@ -13,24 +13,25 @@ phoneBook.controller('phoneBookCtrl',function($scope){
 
     $scope.addUsers = function () {
         
+        
         if ($scope.flagEdit) {
             var link_array = $scope.phoneUsersList[$scope.flagEdit];
-            link_array.firstName = $scope.name;
-            link_array.avatar = $scope.avatar;
-            link_array.group = $scope.groupe;
+            for (prop in link_array) {
+                link_array[prop] = $scope[prop];
+            }
             $scope.flagEdit = false;
         } else {
-            var elments = {
-                firstName: $scope.name,
-                avatar: $scope.avatar,
-                group: $scope.groupe
-            };
+            var elments = new InputType();
+            for (prop in elments) {
+                elments[prop] = $scope[prop] !== '' && $scope[prop] !== false && $scope[prop] !== undefined ? $scope[prop] : elments[prop];
+            }
+
             $scope.phoneUsersList.push(elments);
         }
         
         $scope.name = '';
         $scope.avatar = '';
-        $scope.groupe = '';
+        $scope.group = '';
     }
 
     $scope.removeUsers = function (i) {
@@ -41,9 +42,9 @@ phoneBook.controller('phoneBookCtrl',function($scope){
     $scope.editUsers = function (n) {
         var x = searchByHashkey ( $scope.phoneUsersList, n);
         var index = $scope.phoneUsersList[x];
-        $scope.name = index.firstName;
+        $scope.name = index.name;
         $scope.avatar = index.avatar;
-        $scope.groupe = index.group;
+        $scope.group = index.group;
         $scope.flagEdit = searchByHashkey ( $scope.phoneUsersList, n);
     }
     
@@ -55,4 +56,11 @@ phoneBook.controller('phoneBookCtrl',function($scope){
         }
         return console.log("Not Found");
     }
+
+    function InputType () {
+        this.name = "";
+        this.avatar = "default";
+        this.group = "";
+    }
+
 });

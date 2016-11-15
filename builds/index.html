@@ -18,11 +18,11 @@
         <lable>Avatar:</lable>
         <input type="text" ng-model="avatar">
         <lable>Group:</lable>
-        <input type="text" ng-model="groupe">
+        <input type="text" ng-model="group">
         <button ng-click="addUsers(flagEdit)">Save User</button>
         <div class="phone-list">
           <div ng-repeat="user in phoneUsersList" class="phone-user">
-            <h2 class="user-name">{{user.firstName}}</h2>
+            <h2 class="user-name">{{user.name}}</h2>
             <h3 class="user-group">{{user.group}}</h3>
             <button ng-click="editUsers(user.$$hashKey)">Edit Users</button>
             <button ng-click="removeUsers(user.$$hashKey)">Remote Users</button>
